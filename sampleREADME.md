@@ -1,11 +1,11 @@
 
-![License](https://img.shields.io/badge/license-GNU%20General%20Public%20License%20(GPL)-brightgreen)
+![License](https://img.shields.io/badge/license-MIT%20License-brightgreen)
 
 # My project
 
 ## Description
 
-My very first project.
+description
 
 <details>
   <summary>Table of Contents</summary>
@@ -21,26 +21,26 @@ My very first project.
 
 ## Installation
 
-No need for installation notes.
+install notes
 
 ## Usage
 
-Generates your readme.md file
+usage
 
 ## License
 
-Distributed under the GNU General Public License (GPL).
+Distributed under the MIT License.
 
 ## Contributing
 
-No need to contribute
+contributing
 
 ## Tests
 
-None
+test
 
 ## Questions
 
 GitHub: [yrezvani](https://github.com/yrezvani)
 
-Email: yaserrezvany@gmail.com
+Email: laskjdf;asdlfk

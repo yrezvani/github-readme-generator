@@ -11,6 +11,19 @@ let test = '';
 let githubUsername = '';
 let emailAddress = '';
 
+const questions = [
+    'Enter the title of the project: ',
+    'Enter a description: ',
+    'Enter installation notes: ',
+    'Enter usage comments: ',
+    'Enter your license: ',
+    'Enter contribution instructions: ',
+    'Enter test instructions: ',
+    'Enter your GitHub Username: ',
+    'Enter your email address: ',
+];
+
+
 const genearateLicenseBadge = function (license) {
     const badgeURL = `https://img.shields.io/badge/license-${encodeURIComponent(license)}-brightgreen`;
 
@@ -30,7 +43,7 @@ async function prompt() {
         .prompt([
             {
                 type: 'input',
-                message: 'Title of the project? ',
+                message: questions[0],
                 name: 'title',
             }])
         .then((response) => {
@@ -42,43 +55,43 @@ async function prompt() {
         .prompt([
             {
                 type: 'input',
-                message: 'Enter a description: ',
+                message: questions[1],
                 name: 'description',
             },
             {
                 type: 'input',
-                message: 'Enter installation notes: ',
+                message: questions[2],
                 name: 'installNotes',
             },
             {
                 type: 'input',
-                message: 'Enter usage comments: ',
+                message: questions[3],
                 name: 'usage',
             },
             {
                 type: 'list',
-                message: 'Enter your license: ',
+                message: questions[4],
                 name: 'license',
                 choices: ['MIT License', 'Apache License 2.0', 'GNU General Public License (GPL)', 'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0', 'Eclipse Public License 2.0']
             },
             {
                 type: 'input',
-                message: 'Enter contribution instructions: ',
+                message: questions[5],
                 name: 'contributing',
             },
             {
                 type: 'input',
-                message: 'Enter test instructions: ',
+                message: questions[6],
                 name: 'test',
             },
             {
                 type: 'input',
-                message: 'Enter your GitHub Username: ',
+                message: questions[7],
                 name: 'github',
             },
             {
                 type: 'input',
-                message: 'Enter your email address: ',
+                message: questions[8],
                 name: 'email',
             },
 
