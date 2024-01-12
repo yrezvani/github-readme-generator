@@ -25,3 +25,100 @@ inquirer
     .catch((err) => {
         console.log(err);
     });
+
+inquirer
+    .prompt([
+        {
+            type: 'input',
+            message: 'Enter a description: ',
+            name: 'description',
+        },
+        {
+            type: 'input',
+            message: 'Enter your table of contents: ',
+            name: 'tcontents',
+        },
+        {
+            type: 'input',
+            message: 'Enter installation notes: ',
+            name: 'installNotes',
+        },
+        {
+            type: 'input',
+            message: 'Enter usage comments: ',
+            name: 'usage',
+        },
+        {
+            type: 'input',
+            message: 'Enter your license: ',
+            name: 'license',
+        },
+        {
+            type: 'input',
+            message: 'Who are the contributers (blank if only you): ',
+            name: 'contributing',
+        },
+        {
+            type: 'input',
+            message: 'Enter test instructions: ',
+            name: 'test',
+        },
+        {
+            type: 'input',
+            message: 'Enter your questions: ',
+            name: 'questions',
+        },
+    ])
+    .then((response) => {
+        fs.writeFile('README2.md',
+            `
+# ${response.title}
+
+## Description
+
+${response.description}
+    
+## Table of Contents
+    
+${response.tcontents}
+
+## Installation
+
+${response.installNotes}
+
+## Usage
+
+${response.usage}
+
+## License
+
+License
+
+${response.license}
+
+## Contributing
+
+${response.contributing}
+
+## Tests
+
+${response.test}
+
+## Questions
+
+${response.questions}
+---
+
+© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+    `, (err) => {
+            if (err) {
+                console.log('Error:', err);
+            } else {
+                console.log('File written successfully!');
+            }
+        })
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+
