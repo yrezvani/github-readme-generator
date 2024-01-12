@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "github-readme-generator",
   "version": "1.0.0",
   "description": "",
