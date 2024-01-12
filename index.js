@@ -95,13 +95,13 @@ async function prompt() {
         });
 
 
-    generateREADME()
+    generateREADME('sampleREADME.md')
 
 }
 
 prompt()
 
-function generateREADME() {
+function generateREADME(filename) {
 
     const licenseBadge = genearateLicenseBadge(license);
 
@@ -153,7 +153,7 @@ GitHub: [${githubUsername}](https://github.com/${githubUsername})
 Email: ${emailAddress}
 `;
 
-    fs.writeFile('README2.md', readmeContent, (err) => {
+    fs.writeFile(filename, readmeContent, (err) => {
         if (err) {
             console.log(err);
         } else {
