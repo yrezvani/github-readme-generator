@@ -25,7 +25,7 @@ async function prompt() {
             console.log(`Project title: ${title}`);
         })
 
-    const response2 = await inquirer
+    await inquirer
         .prompt([
             {
                 type: 'input',
@@ -48,7 +48,7 @@ async function prompt() {
                 name: 'usage',
             },
             {
-                type: 'input',
+                type: 'list',
                 message: 'Enter your license: ',
                 name: 'license',
                 choices: ['MIT License', 'Apache License 2.0', 'GNU General Public License (GPL)', 'BSD 2Clause "Simplified" License', 'BSD 3-Clas "New" or "Revised" License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0', 'Eclipse Public License 2.0']
@@ -65,11 +65,6 @@ async function prompt() {
             },
             {
                 type: 'input',
-                message: 'Enter your questions: ',
-                name: 'questions',
-            },
-            {
-                type: 'input',
                 message: 'Enter your GitHub Username: ',
                 name: 'github',
             },
@@ -80,18 +75,65 @@ async function prompt() {
             },
 
         ])
-        .then((response) => {
-            description = response.description;
-            installation = response.installNotes;
-            usage = response.usage;
-            contributing = response.contributing;
-            test = response.test;
-            license = response.license;
-            githubUsername = response.github;
-            emailAddress = response.email;
+        .then((response2) => {
+            description = response2.description;
+            installation = response2.installNotes;
+            usage = response2.usage;
+            contributing = response2.contributing;
+            test = response2.test;
+            license = response2.license;
+            githubUsername = response2.github;
+            emailAddress = response2.email;
         });
+
+    generateREADME()
 
 }
 
 prompt()
 
+function generateREADME() {
+    const readmeContent = `
+# ${title}
+
+## Description
+
+${description}
+
+## Installation
+
+${installation}
+
+## Usage
+
+${usage}
+
+## License
+
+${license}
+
+## Contributing
+
+${contributing}
+
+## Tests
+
+${test}
+
+## Questions
+
+GitHub: [${githubUsername}](https://github.com/${githubUsername})
+
+Email: ${emailAddress}
+`;
+
+    fs.writeFile('README2.md', readmeContent, (err) => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('REAME.md generated successfully');
+        }
+    })
+}
+
+;
