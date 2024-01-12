@@ -92,3 +92,53 @@ inquirer
         emailAddress = response.email;
     });
 
+const generateREADME = function () {
+    fs.writeFile('README2.md',
+        `
+# ${title}
+
+## Description
+
+${description}
+    
+## Table of Contents
+    
+${tcontents}
+
+## Installation
+
+${installNotes}
+
+## Usage
+
+${usage}
+
+## License
+
+${license}
+
+## Contributing
+
+${contributing}
+
+## Tests
+
+${test}
+
+## Questions
+
+${questions}
+GitHub link: http://github.com/${githubUsername}
+---
+
+© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+    `, (err) => {
+        if (err) {
+            console.log('Error:', err);
+        } else {
+            console.log('File written successfully!');
+        }
+    })
+}
+
+generateREADME()
