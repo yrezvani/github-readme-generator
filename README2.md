@@ -1,32 +1,34 @@
 
-# My project
+![License](https://img.shields.io/badge/license-MIT%20License-brightgreen)
+
+# als;kjdf
 
 ## Description
 
-a;lskdfjas;ldfjk
+;aosokdljf
 
 ## Installation
 
-;laskdfja;lskdfj
+as;lkdfj
 
 ## Usage
 
-a;sldkfjas;ldkfj
+as;lkdfj
 
 ## License
 
-MIT License
+Distributed under the MIT License.
 
 ## Contributing
 
-saldkjrfgt sadkrlfgj
+asl;kdhfj
 
 ## Tests
 
-sdlfkjg sd';lfg 
+;aslkdjf
 
 ## Questions
 
-GitHub: [sdlkfj gsdlfk g](https://github.com/sdlkfj gsdlfk g)
+GitHub: [;alskdljf](https://github.com/;alskdljf)
 
-Email: lds;kfjg s;dlfkj g
+Email: ;laslkdjf

@@ -11,6 +11,19 @@ let test = '';
 let githubUsername = '';
 let emailAddress = '';
 
+const genearateLicenseBadge = function (license) {
+    const badgeURL = `https://img.shields.io/badge/license-${encodeURIComponent(license)}-brightgreen`;
+
+    if (license === 'BSD 3-Clause "New" or "Revised" License') {
+        return '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)';
+    } else if (license === 'BSD 2-Clause "Simplified" License') {
+        return '[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)';
+    } else {
+        return `![License](${badgeURL})`
+    }
+}
+
+
 async function prompt() {
 
     const response = await inquirer
@@ -51,7 +64,7 @@ async function prompt() {
                 type: 'list',
                 message: 'Enter your license: ',
                 name: 'license',
-                choices: ['MIT License', 'Apache License 2.0', 'GNU General Public License (GPL)', 'BSD 2Clause "Simplified" License', 'BSD 3-Clas "New" or "Revised" License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0', 'Eclipse Public License 2.0']
+                choices: ['MIT License', 'Apache License 2.0', 'GNU General Public License (GPL)', 'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0', 'Eclipse Public License 2.0']
             },
             {
                 type: 'input',
@@ -86,6 +99,7 @@ async function prompt() {
             emailAddress = response2.email;
         });
 
+
     generateREADME()
 
 }
@@ -93,7 +107,12 @@ async function prompt() {
 prompt()
 
 function generateREADME() {
+
+    const licenseBadge = genearateLicenseBadge(license);
+
     const readmeContent = `
+${licenseBadge}
+
 # ${title}
 
 ## Description
@@ -110,7 +129,7 @@ ${usage}
 
 ## License
 
-${license}
+Distributed under the ${license}.
 
 ## Contributing
 
@@ -135,5 +154,3 @@ Email: ${emailAddress}
         }
     })
 }
-
-;
