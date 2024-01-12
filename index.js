@@ -47,11 +47,6 @@ async function prompt() {
             },
             {
                 type: 'input',
-                message: 'Enter your table of contents: ',
-                name: 'tcontents',
-            },
-            {
-                type: 'input',
                 message: 'Enter installation notes: ',
                 name: 'installNotes',
             },
@@ -68,7 +63,7 @@ async function prompt() {
             },
             {
                 type: 'input',
-                message: 'Who are the contributers (blank if only you): ',
+                message: 'Enter contribution instructions: ',
                 name: 'contributing',
             },
             {
