@@ -52,6 +52,7 @@ inquirer
             type: 'input',
             message: 'Enter your license: ',
             name: 'license',
+            choices: ['MIT License', 'Apache License 2.0', 'GNU General Public License (GPL)', 'BSD 2Clause "Simplified" License', 'BSD 3-Clas "New" or "Revised" License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0', 'Eclipse Public License 2.0']
         },
         {
             type: 'input',
@@ -121,4 +122,3 @@ ${response.questions}
     .catch((err) => {
         console.log(err);
     })
-
