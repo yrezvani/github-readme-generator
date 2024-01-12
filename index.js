@@ -1,6 +1,16 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
 
+let title = '';
+let description = '';
+let installation = '';
+let usage = '';
+let license = '';
+let contributing = '';
+let test = '';
+let githubUsername = '';
+let emailAddress = '';
+
 inquirer
     .prompt([
         {
@@ -10,17 +20,7 @@ inquirer
         }])
     .then((response) => {
         console.log(`Project title: ${response.title}`);
-        fs.writeFile('README2.md',
-            `
-# ${response.title}
- 
-        `, (err) => {
-            if (err) {
-                console.log('Error:', err);
-            } else {
-                console.log('File written successfully!');
-            }
-        })
+        title = response.title
     })
     .catch((err) => {
         console.log(err);
@@ -69,56 +69,26 @@ inquirer
             message: 'Enter your questions: ',
             name: 'questions',
         },
+        {
+            type: 'input',
+            message: 'Enter your GitHub Username: ',
+            name: 'github',
+        },
+        {
+            type: 'input',
+            message: 'Enter your email address: ',
+            name: 'email',
+        },
+
     ])
     .then((response) => {
-        fs.writeFile('README2.md',
-            `
-# ${response.title}
+        description = response.description;
+        installation = response.installNotes;
+        usage = response.usage;
+        contributing = response.contributing;
+        test = response.test;
+        license = response.license;
+        githubUsername = response.github;
+        emailAddress = response.email;
+    });
 
-## Description
-
-${response.description}
-    
-## Table of Contents
-    
-${response.tcontents}
-
-## Installation
-
-${response.installNotes}
-
-## Usage
-
-${response.usage}
-
-## License
-
-License
-
-${response.license}
-
-## Contributing
-
-${response.contributing}
-
-## Tests
-
-${response.test}
-
-## Questions
-
-${response.questions}
----
-
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
-    `, (err) => {
-            if (err) {
-                console.log('Error:', err);
-            } else {
-                console.log('File written successfully!');
-            }
-        })
-    })
-    .catch((err) => {
-        console.log(err);
-    })
