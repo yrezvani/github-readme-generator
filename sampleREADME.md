@@ -1,11 +1,11 @@
 
-![License](https://img.shields.io/badge/license-MIT%20License-brightgreen)
+![License](https://img.shields.io/badge/license-Eclipse%20Public%20License%202.0-brightgreen)
 
 # My project
 
 ## Description
 
-description
+;laskjdf asl;kdjfa;lsdkf
 
 <details>
   <summary>Table of Contents</summary>
@@ -21,26 +21,26 @@ description
 
 ## Installation
 
-install notes
+;aslkdfjas;lkdjf
 
 ## Usage
 
-usage
+lsakjdfa;sldkjfja
 
 ## License
 
-Distributed under the MIT License.
+Distributed under the Eclipse Public License 2.0.
 
 ## Contributing
 
-contributing
+als;kdjflksajd flkj asd kljsaldkfj al;sakdjf l;askdjfe 
 
 ## Tests
 
-test
+a;slkdjfas;lkdfj asl;kdj fas;lkd j
 
 ## Questions
 
 GitHub: [yrezvani](https://github.com/yrezvani)
 
-Email: laskjdf;asdlfk
+Email: yaserrezvany@gmail.com

@@ -164,6 +164,8 @@ ${test}
 GitHub: [${githubUsername}](https://github.com/${githubUsername})
 
 Email: ${emailAddress}
+
+If you have any queries, you can contact me using the email above.
 `;
 
     fs.writeFile(filename, readmeContent, (err) => {
