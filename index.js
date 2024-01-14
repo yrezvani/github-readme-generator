@@ -1,6 +1,8 @@
+// Import necessary modules
 import inquirer from 'inquirer';
 import fs from 'fs';
 
+// Initialize variables to store user input
 let title = '';
 let description = '';
 let installation = '';
@@ -11,6 +13,7 @@ let test = '';
 let githubUsername = '';
 let emailAddress = '';
 
+// Array containing questions to prompt the user
 const questions = [
     'Enter the title of the project: ',
     'Enter a description: ',
@@ -23,10 +26,11 @@ const questions = [
     'Enter your email address: ',
 ];
 
-
+// Function to generate a license badge based on the provided license
 const genearateLicenseBadge = function (license) {
     const badgeURL = `https://img.shields.io/badge/license-${encodeURIComponent(license)}-brightgreen`;
 
+    // Determine the appropriate license badge based on the license type
     if (license === 'BSD 3-Clause "New" or "Revised" License') {
         return '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)';
     } else if (license === 'BSD 2-Clause "Simplified" License') {
@@ -36,9 +40,9 @@ const genearateLicenseBadge = function (license) {
     }
 }
 
-
+// Asynchronous function to prompt the user for input
 async function prompt() {
-
+    // Prompt for the project title and display it
     const response = await inquirer
         .prompt([
             {
@@ -50,7 +54,7 @@ async function prompt() {
             title = response.title
             console.log(`Project title: ${title}`);
         })
-
+    // Prompt for additional project details    
     await inquirer
         .prompt([
             {
@@ -97,6 +101,7 @@ async function prompt() {
 
         ])
         .then((response2) => {
+            // Assign user responses to corresponding variables
             description = response2.description;
             installation = response2.installNotes;
             usage = response2.usage;
@@ -107,17 +112,21 @@ async function prompt() {
             emailAddress = response2.email;
         });
 
-
+    // Assign user responses to corresponding variables    
     generateREADME('README.md')
 
 }
 
+// Call the prompt function to initiate user input
 prompt()
 
+// Function to generate the README file with the collected information
 function generateREADME(filename) {
 
+    // Generate a license badge based on the provided license
     const licenseBadge = genearateLicenseBadge(license);
 
+    // Create the content for the README file
     const readmeContent = `
 ${licenseBadge}
 
@@ -167,7 +176,7 @@ Email: ${emailAddress}
 
 If you have any queries, you can contact me using the email above.
 `;
-
+    // Write the README file to the specified filename
     fs.writeFile(filename, readmeContent, (err) => {
         if (err) {
             console.log(err);

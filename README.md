@@ -1,6 +1,6 @@
 # Github Readme Generator
 
-This app simplifies the process of adding a README.md file to your project. The app is terminal-based with not GUI. The user answers a series of prompts about their project, and a README.md file is generated based on those questions. The readme file adds a badge for the license and has a table of contents that takes the user to the right section upon clicking.
+This app simplifies the process of adding a README.md file to your project. The app is terminal-based with no GUI. The user answers a series of prompts about their project, and a README.md file is generated based on those questions. The readme file adds a badge for the license and has a table of contents that takes the user to the right section upon clicking.
 
 ## Screenshot
 
