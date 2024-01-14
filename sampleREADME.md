@@ -5,7 +5,7 @@
 
 ## Description
 
-This is a readme.md generator app.
+This app generates markdown readme files for your apps.
 
 <details>
   <summary>Table of Contents</summary>
@@ -25,7 +25,7 @@ N/A
 
 ## Usage
 
-You have to type node index.js in the terminal to run the app.
+You need to type "node index.js" in order to get the prompts about your app. Once you have answered all the questions, your readme file will be generated in the same folder.
 
 ## License
 

@@ -108,7 +108,7 @@ async function prompt() {
         });
 
 
-    generateREADME('sampleREADME.md')
+    generateREADME('README.md')
 
 }
 

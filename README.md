@@ -16,7 +16,7 @@ In order to use the app, you need to enter "node index.js" in the terminal. You 
 
 ## Video walkthrough
 
-
+https://youtu.be/w7IUY4HKJT4
 
 ## Github repository
 
