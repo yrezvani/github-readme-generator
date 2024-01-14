@@ -1,11 +1,11 @@
 
-![License](https://img.shields.io/badge/license-Eclipse%20Public%20License%202.0-brightgreen)
+![License](https://img.shields.io/badge/license-MIT%20License-brightgreen)
 
 # My project
 
 ## Description
 
-;laskjdf asl;kdjfa;lsdkf
+This is a readme.md generator app.
 
 <details>
   <summary>Table of Contents</summary>
@@ -21,26 +21,28 @@
 
 ## Installation
 
-;aslkdfjas;lkdjf
+N/A
 
 ## Usage
 
-lsakjdfa;sldkjfja
+You have to type node index.js in the terminal to run the app.
 
 ## License
 
-Distributed under the Eclipse Public License 2.0.
+Distributed under the MIT License.
 
 ## Contributing
 
-als;kdjflksajd flkj asd kljsaldkfj al;sakdjf l;askdjfe 
+N/A
 
 ## Tests
 
-a;slkdjfas;lkdfj asl;kdj fas;lkd j
+N/A
 
 ## Questions
 
 GitHub: [yrezvani](https://github.com/yrezvani)
 
 Email: yaserrezvany@gmail.com
+
+If you have any queries, you can contact me using the email above.
